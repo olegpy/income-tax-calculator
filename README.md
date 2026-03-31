@@ -41,7 +41,7 @@ For Playwright UI mode:
 ```bash
 npm run test:e2e:ui
 ```
-:wq
+
 ## Tests
 
 - Unit tests are written with `Vitest`

@@ -12,7 +12,10 @@
     "test:run": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:headed": "playwright test --headed"
+    "test:e2e:headed": "playwright test --headed",
+    "lighthouse:run": "lighthouse http://127.0.0.1:4173 --config-path=./lighthouse.config.cjs --output=html --output-path=./lighthouse-report.html --chrome-flags=\"--headless=new --no-sandbox\"",
+    "lighthouse:open": "open ./lighthouse-report.html",
+    "lighthouse:view": "npm run lighthouse:run && npm run lighthouse:open"
   },
   "dependencies": {
     "react": "^19.2.4",
@@ -34,6 +37,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
     "jsdom": "^29.0.1",
+    "lighthouse": "^13.0.3",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.57.0",
     "vite": "^8.0.1",
